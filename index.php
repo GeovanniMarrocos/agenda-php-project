@@ -1,4 +1,4 @@
-<?php include_once('./config/url.php');?>
+<?php require_once('./config/url.php');?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

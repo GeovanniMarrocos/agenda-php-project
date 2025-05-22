@@ -16,10 +16,8 @@
      <link rel="stylesheet" href="<?php echo $BASE_URL ?>./css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a href="">
-                <img src="<?php echo $BASE_URL ?>../img/logo_agenda.svg" alt="Agenda">
-            </a> 
-        </nav>
-    </header>  
+    <div class="navbar-dark bg-dark bg">
+        <div class=" container text-center">
+            <h2>Agenda de Contatos</h2>
+        </div>
+    </div>  

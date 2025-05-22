@@ -16,8 +16,13 @@
      <link rel="stylesheet" href="<?php echo $BASE_URL ?>./css/style.css">
 </head>
 <body>
-    <div class="navbar-dark bg-dark bg">
-        <div class=" container text-center">
-            <h2>Agenda de Contatos</h2>
-        </div>
-    </div>  
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-link p-0">
+                <img src="<?php echo $BASE_URL; ?>/img/agenda.svg" alt="Agenda" class="img-fluid" style="width: 120px;">
+            </a>
+            <div>
+                <h3 class="justify-content-center m-lg-5">Agenda de Fornecedores</h3>
+            </div>    
+        </nav>
+    </header>  

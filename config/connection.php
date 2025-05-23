@@ -6,7 +6,6 @@ $user = "root";
 $password = "12345";
 
 
-
 try {
 
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
@@ -16,6 +15,6 @@ try {
 
 }catch(PDOException $e) 
 {
-    $error = $e->getMessage("Erro ao conectar com o banco de dados {$dbname}");
+    $error = $e->getMessage();
     echo "Erro: $error";
 }

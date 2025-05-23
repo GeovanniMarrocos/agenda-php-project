@@ -7,7 +7,7 @@
         <form action="" method="post">
             <label for="">Nome do Contato</label>
             <input name="name" type="text">
-            <label for=""> Número</label>
+            <label for="">Número</label>
             <input type="" name="phone">
         </form>
     </div>

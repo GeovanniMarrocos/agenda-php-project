@@ -8,6 +8,7 @@ include_once('./templates/header.php');
 ?>
 
 <div class=" container">
+    <p id="message">Testando Mensagem</p>
     <?php if(isset($printMessage) && $printMessage != ''): ?>
         <div class=" text-center" id="message"> <?php $printMessage?></div>
     <?php endif;?>

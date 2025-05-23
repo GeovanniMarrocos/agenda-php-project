@@ -1,4 +1,5 @@
 <?php require_once('./config/url.php');?>
+<?php require_once('./config/process.php');?>
 <?php require_once('./vendor/autoload.php');?>
 
 <!DOCTYPE html>

@@ -1,3 +1,7 @@
-.img-fluid {
-    width: 300px;
+img {
+    width: 30px;
+}
+
+.navbar-nav {
+    margin-left: 400px;
 }

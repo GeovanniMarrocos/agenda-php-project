@@ -27,13 +27,13 @@ include_once('./templates/header.php');
                <tbody>
                     <?php foreach($contacts as $contact):?>
                         <tr>
-                            <td scope="row"><?php echo $contact['id']?></td>
+                            <td scope="row" class="col-id"><?php echo $contact['id']?></td>
                             <td scope="row"><?php echo $contact['name']?></td>
                             <td scope="row"><?php echo $contact['phone']?></td>
                             <td class="actions">
                                 <a href="#"><i class="fas fa-eye check-icon"></i></a>
                                 <a href="#"><i class="far fa-edit edit-icon"></i></a>
-                                <button type="subit"><i class="fas fa-times delete-icon"></i></button>
+                                <button type="subit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
                             </td>
                         </tr>
                     <?php endforeach;?>

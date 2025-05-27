@@ -8,10 +8,23 @@ require_once('./vendor/autoload.php');
 
 
 
+$id;
 
+if(!empty($_GET))
+{
+    $id = $_GET['id'];
+}
 
+// Retorna o dado de um contato
 
+if(!empty($id))
+{
 
+   $query = "SELECT id FROM contacts"; 
+
+   
+
+} else{
 
 // Retorna todos os processos 
 $contacts = [];
@@ -23,3 +36,5 @@ $stmt = $conn->prepare($query);
 $stmt->execute();
 
 $contacts = $stmt->fetchAll();
+
+}

@@ -6,6 +6,14 @@ require_once('./config/connection.php');
 require_once('./config/url.php');
 require_once('./vendor/autoload.php');
 
+
+
+
+
+
+
+
+// Retorna todos os processos 
 $contacts = [];
 
 $query = "SELECT * FROM contacts";

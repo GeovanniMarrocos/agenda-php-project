@@ -6,5 +6,4 @@ if(isset($_SERVER['message']))
     $_SESSION['message'] = '';
 }
 
-
 ?>

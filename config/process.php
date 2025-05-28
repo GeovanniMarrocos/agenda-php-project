@@ -20,9 +20,10 @@ if(!empty($_GET))
 if(!empty($id))
 {
 
-   $query = "SELECT id FROM contacts"; 
-
+   $queryId = "SELECT id FROM contacts"; 
    
+   $stmt = $conn->prepare($queryId);
+    
 
 } else{
 

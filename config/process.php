@@ -24,7 +24,6 @@ if(!empty($id))
    
    $stmt = $conn->prepare($queryId);
     
-
 } else{
 
 // Retorna todos os processos 

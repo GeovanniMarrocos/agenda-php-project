@@ -37,6 +37,6 @@ $stmt = $conn->prepare($query);
 
 $stmt->execute();
 
-$contacts = $stmt->fetchAll();
+$contact = $stmt->fetchAll();
 
 }

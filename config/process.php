@@ -6,8 +6,6 @@ require_once('./config/connection.php');
 require_once('./config/url.php');
 require_once('./vendor/autoload.php');
 
-
-
 $id;
 
 if(!empty($_GET))
@@ -19,10 +17,14 @@ if(!empty($_GET))
 
 if(!empty($id))
 {
-
-   $queryId = "SELECT id FROM contacts"; 
+   $query = "SELECT * FROM contacts WHERE id = :id"; 
    
-   $stmt = $conn->prepare($queryId);
+   $stmt = $conn->prepare($query);
+   $stmt->bindParam(":id", $id);
+   $stmt->execute();
+
+   $contacts = $stmt->fetch();
+
     
 } else{
 

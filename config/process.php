@@ -41,6 +41,8 @@ if (!empty($data))
     
     }
 
+    // REDIRECIONAMENTO DE PÁGINA
+    header("Location:" . $BASE_URL . "../index.php");
 
 
 // SELEÇÃO DE DADOS
@@ -78,7 +80,7 @@ else
 
         $stmt->execute();
 
-        $contact = $stmt->fetchAll();
+        $contacts = $stmt->fetchAll();
     }
 }
 

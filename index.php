@@ -1,6 +1,5 @@
 <?php 
 require_once('./vendor/autoload.php');
-require_once('./helpers/message.php');
 require_once('./config/connection.php');
 require_once('./config/process.php');
 ?>
@@ -11,7 +10,7 @@ include_once('./templates/header.php');
 
 <div class=" container">
     <?php if(isset($printMessage) && $printMessage != ''): ?>
-        <div class=" text-center" id="message"> <?php $printMessage?></div>
+        <p class=" mt-4 text-center" id="message"> <?php echo $printMessage?></p>
     <?php endif;?>
     <h1 id="main-title">Minha Agenda</h1>
     <?php if(count($contacts) > 0): ?>

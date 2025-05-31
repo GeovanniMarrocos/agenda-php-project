@@ -1,6 +1,16 @@
 <?php require_once('./config/url.php');?>
 <?php require_once('./config/process.php');?>
 <?php require_once('./vendor/autoload.php');?>
+<?php 
+// LIMPA A MENSAGEM
+if(isset($_SERVER['message']))
+{
+    $printMessage = $_SESSION['message'];
+    $_SESSION['message'] = '';
+}
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

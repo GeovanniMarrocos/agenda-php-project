@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 
@@ -6,38 +6,45 @@ require_once('./config/connection.php');
 require_once('./config/url.php');
 require_once('./vendor/autoload.php');
 
-$id;
+$data = $_POST;
 
-if(!empty($_GET))
+if (!empty($data)) 
 {
-    $id = $_GET['id'];
-}
 
-// Retorna o dado de um contato
-
-if(!empty($id))
+} 
+else 
 {
-   $query = "SELECT * FROM contacts WHERE id = :id"; 
-   
-   $stmt = $conn->prepare($query);
-   $stmt->bindParam(":id", $id);
-   $stmt->execute();
+    $id;
 
-   $contacts = $stmt->fetch();
+    if (!empty($_GET)) 
+    {
+        $id = $_GET['id'];
+    }
 
-    
-} else{
+    // Retorna o dado de um contato
 
-// Retorna todos os processos 
-$contacts = [];
+    if (!empty($id)) 
+    {
+        $query = "SELECT * FROM contacts WHERE id = :id";
 
-$query = "SELECT * FROM contacts";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
 
-$stmt = $conn->prepare($query);
+        $contacts = $stmt->fetch();
+    } 
+    else 
+    {
 
-$stmt->execute();
+        // Retorna todos os processos 
+        $contacts = [];
 
-$contact = $stmt->fetchAll();
+        $query = "SELECT * FROM contacts";
 
+        $stmt = $conn->prepare($query);
+
+        $stmt->execute();
+
+        $contact = $stmt->fetchAll();
+    }
 }
-

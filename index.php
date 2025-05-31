@@ -1,6 +1,8 @@
 <?php 
 require_once('./vendor/autoload.php');
 require_once('./helpers/message.php');
+require_once('./config/connection.php');
+require_once('./config/process.php');
 ?>
 
 <?php 
@@ -8,7 +10,6 @@ include_once('./templates/header.php');
 ?>
 
 <div class=" container">
-    <p id="message">Testando Mensagem</p>
     <?php if(isset($printMessage) && $printMessage != ''): ?>
         <div class=" text-center" id="message"> <?php $printMessage?></div>
     <?php endif;?>

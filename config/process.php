@@ -40,3 +40,4 @@ $stmt->execute();
 $contact = $stmt->fetchAll();
 
 }
+

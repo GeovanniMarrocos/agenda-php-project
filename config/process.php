@@ -12,7 +12,6 @@ $data = $_POST;
 if (!empty($data)) 
 {
    
-
     // CRIAR CONTATO
     if($data["type"] === "create")
     {
@@ -42,7 +41,7 @@ if (!empty($data))
     }
 
     // REDIRECIONAMENTO DE PÁGINA
-    header("Location:" . $BASE_URL . "../index.php");
+     header("Location:" . $BASE_URL . "../index.php");
 
 
 // SELEÇÃO DE DADOS

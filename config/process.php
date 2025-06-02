@@ -17,7 +17,7 @@ if (!empty($data))
     {
         $name = $data["name"];
         $phone = $data["phone"];
-        $obeservations = $data["observations"];
+        $observations = $data["observations"];
 
         $query = "INSERT INTO contacts (name, phone ,observations) VALUES (:name, :phone, :observations)";
         

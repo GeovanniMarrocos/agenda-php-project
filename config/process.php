@@ -40,6 +40,34 @@ if (!empty($data))
     
     }
 
+
+    if($data["type"] === "edit")
+    {
+        $id = ["id"];
+        $name = $data["name"];
+        $phone = $data["phone"];
+        $observations = $data["observations"];
+
+        $query = "INSERT INTO contacts (name, phone ,observations) VALUES (:name, :phone, :observations)";
+        
+        $stmt = $conn->prepare($query);
+
+        $stmt->bindParam(":name", $name);
+        $stmt->bindParam(":phone", $phone);
+        $stmt->bindParam(":observations", $observations);
+
+           try {
+
+             $stmt->execute();
+             $_SESSION["message"] = "Contato atualizado com sucesso!";   
+
+            }catch(PDOException $e)
+            {
+                $error = $e->getMessage();
+                echo "Erro: $error";
+            }
+    
+    }
     // REDIRECIONAMENTO DE PÁGINA
      header("Location:" . $BASE_URL . "../index.php");
 
@@ -54,7 +82,7 @@ else
         $id = $_GET["id"];
     }
 
-    // Retorna o dado de um contato
+    // RETORNA O DADO DE UM CONTATO
 
     if (!empty($id)) 
     {
@@ -69,7 +97,7 @@ else
     else 
     {
 
-        // Retorna todos os processos 
+        // RETORNA TODOS OS PROCESSOS
         $contacts = [];
 
         $query = "SELECT * FROM contacts";

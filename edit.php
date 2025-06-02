@@ -2,7 +2,6 @@
  <?php include_once('./templates/header.php');?>
  <div class="container">
        <?php include_once("./templates/backbtn.html");?>
-       <?php dump($contacts['observations'])?>
     <h1 id="main-title">Editar Contato</h1>
     <form id="create-form" action="<?php echo $BASE_URL?>./config/process.php" method="POST">
         <input type="hidden" name="type" value="edit">
@@ -17,7 +16,7 @@
         </div>
         <div class=" form-group mb-3">
             <label for="observations">Observações:</label>
-            <textarea type="text" class="form-control" id="observations" name="observations" placeholder="Insira as observações" value="<?php echo $contacts['observations']?>" required rows="4"></textarea>
+            <textarea type="text" class="form-control" id="observations" name="observations" placeholder="Insira as observações" required rows="4"><?php echo $contacts['observations']?></textarea>
         </div>
         <button type="submit" class=" btn btn-primary mt-3">Atualizar</button>
     </form>

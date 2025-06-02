@@ -43,7 +43,6 @@ if (!empty($data))
     // REDIRECIONAMENTO DE PÁGINA
      header("Location:" . $BASE_URL . "../index.php");
 
-
 // SELEÇÃO DE DADOS
 } 
 else 

@@ -4,14 +4,13 @@ require_once('./config/connection.php');
 require_once('./config/process.php');
 ?>
 
+
 <?php 
 include_once('./templates/header.php');
 ?>
 
-<div class=" container">
-    <?php if(isset($printMessage) && $printMessage != ''): ?>
-        <p class=" mt-4 text-center" id="message"> <?php echo $printMessage?></p>
-    <?php endif;?>
+<div class="container">
+    <?php include_once('./helpers/message.php')?>
     <h1 id="main-title">Minha Agenda</h1>
     <?php if(count($contacts) > 0): ?>
         <div>

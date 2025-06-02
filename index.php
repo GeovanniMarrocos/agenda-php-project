@@ -31,7 +31,7 @@ include_once('./templates/header.php');
                             <td scope="row"><?php echo $contact['phone']?></td>
                             <td class="actions">
                                 <a href="<?php echo $BASE_URL ?>show.php?id"><i class="fas fa-eye check-icon"></i></a>
-                                <a href="<?php echo $BASE_URL ?>show.php?id"><i class="far fa-edit edit-icon"></i></a>
+                                <a href="<?php echo $BASE_URL ?>edit.php?id"><i class="far fa-edit edit-icon"></i></a>
                                 <button type="subit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
                             </td>
                         </tr>

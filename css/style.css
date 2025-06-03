@@ -39,6 +39,12 @@
     color: #007bff;   
 }
 
+/* DELETE */
+
+.delete-form {
+    display: inline-block;
+}
+
 .delete-btn {
     background-color: transparent;
     border: none;
@@ -99,6 +105,8 @@
     max-width: 500px !important;
     margin: 0 auto !important;
 }
+
+
 
 /* MOBILE */
 @media(max-width: 480px) {

@@ -32,7 +32,12 @@ include_once('./templates/header.php');
                             <td class="actions">
                                 <a href="<?php echo $BASE_URL ?>show.php?id=<?php echo $contact['id']?>"><i class="fas fa-eye check-icon"></i></a>
                                 <a href="<?php echo $BASE_URL ?>edit.php?id=<?php echo $contact['id']?>"><i class="far fa-edit edit-icon"></i></a>
-                                <button type="subit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
+                                <form class="d-inline-block" action="<?php echo $BASE_URL ?>./config/process.php" method="POST">
+                                    <input type="hidden" name="type" value="delete">
+                                    <input type="hidden" name="id" value="<?php echo $contact['id']?>">
+                                    <button type="subit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
+                                </form>
+                                
                             </td>
                         </tr>
                     <?php endforeach;?>

@@ -69,7 +69,21 @@ if (!empty($data))
             }
 
     }
-    
+    elseif($type["delete"])
+    {
+        $id = $data['id'];
+        
+        $id = $data["id"];
+
+        $query = "DELETE FROM agenda.contacts WHERE id = :id";
+
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(":id", $id);
+
+
+
+
+    }
     // REDIRECIONAMENTO DE PÁGINA
      header("Location:" . $BASE_URL . "../index.php");
 

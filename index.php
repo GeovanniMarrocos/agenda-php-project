@@ -35,7 +35,7 @@ include_once('./templates/header.php');
                                 <form class="d-inline-block" action="<?php echo $BASE_URL ?>./config/process.php" method="POST">
                                     <input type="hidden" name="type" value="delete">
                                     <input type="hidden" name="id" value="<?php echo $contact['id']?>">
-                                    <button type="subit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
+                                    <button id="btnDeletar" type="subit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
                                 </form>
                             </td>
                         </tr>

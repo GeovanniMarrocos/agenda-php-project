@@ -30,14 +30,12 @@ if(isset($_SERVER['message']))
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
-            <a href="<?php echo $BASE_URL; ?>index.php" target="_blank" rel="noopener noreferrer" class="btn btn-link p-0">
+            <a href="<?php echo $BASE_URL; ?>index.php" rel="noopener noreferrer" class="btn btn-link p-0">
                 <img src="<?php echo $BASE_URL; ?>/img/agenda.svg" alt="Agenda" class="img-fluid" style="width: 120px;">
             </a>
             <div>
                 <div class="navbar-nav">
-                     <a class="nav-link active" id="home-link" href="index.php">Agenda</a>
                      <a class="nav-link active" id="create-link" href="create.php">Adicionar contatos</a>
-                     <a class="nav-link active" id="delete-link" href="delete.php">Deletar contatos</a>
                 </div>
             </div>    
         </nav>

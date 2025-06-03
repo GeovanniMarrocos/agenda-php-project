@@ -37,7 +37,6 @@ include_once('./templates/header.php');
                                     <input type="hidden" name="id" value="<?php echo $contact['id']?>">
                                     <button type="subit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
                                 </form>
-                                
                             </td>
                         </tr>
                     <?php endforeach;?>

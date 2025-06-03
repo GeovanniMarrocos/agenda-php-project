@@ -5,7 +5,7 @@
     <h1 id="main-title">Editar Contato</h1>
     <form id="create-form" action="<?php echo $BASE_URL ?>./config/process.php" method="POST">
         <input type="hidden" name="type" value="edit">
-        <input type="hidden" name="id" value="<?php echo $contact['id'] ?>">
+        <input type="hidden" name="id" value="<?php echo $contacts['id'] ?>">
         <div class="form-group mb-3">
             <label for="name">Nome do contato:</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Digite o nome" value="<?php echo $contacts['name'] ?>" required>

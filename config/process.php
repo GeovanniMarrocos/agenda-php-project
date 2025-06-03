@@ -39,35 +39,37 @@ if (!empty($data))
             }
     
     }
-
-
-    if($data["type"] === "edit")
+    else if($data["type"] === "edit")
     {
-        $id = ["id"];
         $name = $data["name"];
         $phone = $data["phone"];
         $observations = $data["observations"];
+        $id = $data["id"];
 
-        $query = "INSERT INTO contacts (name, phone ,observations) VALUES (:name, :phone, :observations)";
-        
+        $query = "UPDATE agenda.contacts SET name = :name, phone = :phone, observations = :observations WHERE id = :id";
+
         $stmt = $conn->prepare($query);
 
         $stmt->bindParam(":name", $name);
         $stmt->bindParam(":phone", $phone);
         $stmt->bindParam(":observations", $observations);
+        $stmt->bindParam(":id", $id);
+        
 
-           try {
+
+       try {
 
              $stmt->execute();
-             $_SESSION["message"] = "Contato atualizado com sucesso!";   
+             $_SESSION["message"] = "Contato {$name} atualizado com sucesso!";   
 
             }catch(PDOException $e)
             {
                 $error = $e->getMessage();
                 echo "Erro: $error";
             }
-    
+
     }
+    
     // REDIRECIONAMENTO DE PÁGINA
      header("Location:" . $BASE_URL . "../index.php");
 

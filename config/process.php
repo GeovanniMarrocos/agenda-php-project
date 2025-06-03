@@ -90,8 +90,26 @@ if (!empty($data))
              $error = $e->getMessage();
              echo "Erro: $error";
             }
+        
 
+        // RETORNA TODOS OS PROCESSOS
+        $contacts = [];
 
+        $query = "SELECT * FROM contacts";
+
+        $stmt = $conn->prepare($query);
+
+        $stmt->execute();
+
+        $contacts = $stmt->fetchAll();
+
+        if(count($contacts) <= 0)
+        {
+            $query = "TRUNCATE agenda.contacts;";
+            
+            $stmt = $conn->prepare($query);
+            $stmt->execute();
+        }
     }
     // REDIRECIONAMENTO DE PÁGINA
      header("Location:" . $BASE_URL . "../index.php");
@@ -132,6 +150,8 @@ else
         $stmt->execute();
 
         $contacts = $stmt->fetchAll();
+
+        
     }
 }
 

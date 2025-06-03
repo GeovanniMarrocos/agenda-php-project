@@ -4,7 +4,6 @@ require_once('./config/connection.php');
 require_once('./config/process.php');
 ?>
 
-
 <?php 
 include_once('./templates/header.php');
 ?>

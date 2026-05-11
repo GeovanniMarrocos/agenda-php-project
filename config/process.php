@@ -73,11 +73,8 @@ if (!empty($data))
     {
         
         $id = $data["id"];
-
         $query = "DELETE FROM agenda.contacts WHERE id = :id";
-
         $stmt = $conn->prepare($query);
-
         $stmt->bindParam(":id", $id);
 
        try {
@@ -94,19 +91,14 @@ if (!empty($data))
 
         // RETORNA TODOS OS PROCESSOS
         $contacts = [];
-
         $query = "SELECT * FROM contacts";
-
         $stmt = $conn->prepare($query);
-
         $stmt->execute();
-
         $contacts = $stmt->fetchAll();
 
         if(count($contacts) <= 0)
         {
             $query = "TRUNCATE agenda.contacts;";
-            
             $stmt = $conn->prepare($query);
             $stmt->execute();
         }
@@ -134,7 +126,6 @@ else
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":id", $id);
         $stmt->execute();
-
         $contacts = $stmt->fetch();
     } 
     else 
@@ -142,13 +133,9 @@ else
 
         // RETORNA TODOS OS PROCESSOS
         $contacts = [];
-
         $query = "SELECT * FROM contacts";
-
         $stmt = $conn->prepare($query);
-
         $stmt->execute();
-
         $contacts = $stmt->fetchAll();
 
         
